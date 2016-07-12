@@ -1,0 +1,17 @@
+<h1>Student List</h1>
+<% @posts.each do |post| %>
+
+<%= post.ad %> 
+
+<h2><%= link_to post.ad, post %> </h2>
+
+<p>
+  <p><%= time_ago_in_words post.created_at %> ago </p>
+</p>
+
+<% end %>
+
+<%= link_to "New Stdudent Add",new_post_path %>
+
+
+
